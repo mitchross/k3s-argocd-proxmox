@@ -1,12 +1,14 @@
 cluster:
-  name: rpi
+  name: abel
   id: 1
 
+k8sServiceHost: "192.168.10.100"
+k8sServicePort: "6443"
 kubeProxyReplacement: true
 
  # Talos specific
-k8sServiceHost: 192.168.10.100
-k8sServicePort: 6443
+#k8sServiceHost: localhost
+#k8sServicePort: 7445
 securityContext:
   capabilities:
     ciliumAgent: [ CHOWN,KILL,NET_ADMIN,NET_RAW,IPC_LOCK,SYS_ADMIN,SYS_RESOURCE,DAC_OVERRIDE,FOWNER,SETGID,SETUID ]
@@ -22,7 +24,7 @@ ipam:
   mode: kubernetes
 
 operator:
-  # Can't have more replicas than nodes
+    # Can't have more replicas than nodes
   replicas: 1
   rollOutPods: true
   resources:
@@ -63,12 +65,12 @@ gatewayAPI:
   enabled: true
 
 hubble:
-  enabled: true
+  enabled: false
   relay:
-    enabled: true
+    enabled: false
     rollOutPods: true
   ui:
-    enabled: true
+    enabled: false
     rollOutPods: true
 
 ingressController:
@@ -77,18 +79,7 @@ ingressController:
   loadbalancerMode: shared
   service:
     annotations:
-      io.cilium/lb-ipam-ips: 192.168.10.41
+      io.cilium/lb-ipam-ips: 192.168.10.42
     # Random values so Argo CD doesn't complain about the service being out of sync
     insecureNodePort: 32434
     secureNodePort: 31247
-
-# mTLS
-authentication:
-  enabled: false
-  mutual:
-    spire:
-      enabled: false
-      install:
-        server:
-          dataStorage:
-            storageClass: cilium-spire-sc
