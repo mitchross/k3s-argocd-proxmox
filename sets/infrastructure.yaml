@@ -6,7 +6,7 @@ metadata:
 spec:
   project: app-of-apps
   source:
-    path: k8s/infra
+    path: infra
     repoURL: https://github.com/mitchross/k3s-argocd-proxmox
     targetRevision: HEAD
   destination:
