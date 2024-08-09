@@ -8,7 +8,7 @@ spec:
     - name: internal
       namespace: gateway
   hostnames:
-    - "hubble.vanillax.xyz"
+    - "hubble.vanillax.me"
   rules:
     - matches:
         - path:

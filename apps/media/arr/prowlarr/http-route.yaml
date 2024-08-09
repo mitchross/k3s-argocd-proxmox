@@ -8,7 +8,7 @@ spec:
     - name: internal
       namespace: gateway
   hostnames:
-    - "prowlarr.vanillax.xyz"
+    - "prowlarr.vanillax.me"
   rules:
     - matches:
         - path:

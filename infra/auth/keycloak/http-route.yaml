@@ -8,7 +8,7 @@ spec:
     - name: internal
       namespace: gateway
   hostnames:
-    - "keycloak.vanillax.xyz"
+    - "keycloak.vanillax.me"
   rules:
     - matches:
         - path:

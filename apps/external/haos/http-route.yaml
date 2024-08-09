@@ -8,7 +8,7 @@ spec:
     - name: internal
       namespace: gateway
   hostnames:
-    - "haos.vanillax.xyz"
+    - "haos.vanillax.me"
   rules:
     - backendRefs:
         - name: home-assistant

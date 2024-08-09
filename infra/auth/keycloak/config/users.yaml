@@ -5,7 +5,7 @@ metadata:
 spec:
   forProvider:
     enabled: true
-    email: vegard@vanillax.xyz
+    email: vegard@vanillax.me
     firstName: Vegard
     lastName: Hagen
     username: veh

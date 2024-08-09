@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: cilium
   rules:
-    - host: plex.vanillax.xyz
+    - host: plex.vanillax.me
       http:
         paths:
           - path: /
@@ -21,4 +21,4 @@ spec:
   tls:
     - secretName: jellyfin-ingress-tls
       hosts:
-        - jellyfin.vanillax.xyz
+        - jellyfin.vanillax.me

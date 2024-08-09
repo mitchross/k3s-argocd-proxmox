@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: cilium
   rules:
-    - host: plex.vanillax.xyz
+    - host: plex.vanillax.me
       http:
         paths:
           - path: /
@@ -21,4 +21,4 @@ spec:
   tls:
     - secretName: plex-ingress-tls
       hosts:
-        - plex.vanillax.xyz
+        - plex.vanillax.me

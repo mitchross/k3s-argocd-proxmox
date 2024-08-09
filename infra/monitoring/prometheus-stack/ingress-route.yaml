@@ -9,21 +9,21 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`prometheus.vanillax.xyz`)
+    - match: Host(`prometheus.vanillax.me`)
       kind: Rule
       services:
         - name: kube-prometheus-stack-prometheus
           port: http-web # 9090
       middlewares:
         - name: traefik-forward-auth
-    - match: Host(`grafana.vanillax.xyz`)
+    - match: Host(`grafana.vanillax.me`)
       kind: Rule
       services:
         - name: kube-prometheus-stack-grafana
           port: http-web # 80
       middlewares:
         - name: traefik-forward-auth
-    - match: Host(`alertmanager.vanillax.xyz`)
+    - match: Host(`alertmanager.vanillax.me`)
       kind: Rule
       services:
         - name: kube-prometheus-stack-alertmanager

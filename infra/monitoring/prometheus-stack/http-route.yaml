@@ -8,7 +8,7 @@ spec:
     - name: internal
       namespace: gateway
   hostnames:
-    - "grafana.vanillax.xyz"
+    - "grafana.vanillax.me"
   rules:
     - matches:
         - path:

@@ -10,7 +10,7 @@ spec:
       sectionName: https-gateway  # This matches the name of the HTTPS listener
 
   hostnames:
-    - "argocd.vanillax.xyz"
+    - "argocd.vanillax.me"
   rules:
     - matches:
         - path:

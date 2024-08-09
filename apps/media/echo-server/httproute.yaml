@@ -9,7 +9,7 @@ spec:
     namespace: gateway
     sectionName: https
   hostnames:
-  - "echo-server.vanillax.xyz"
+  - "echo-server.vanillax.me"
   rules:
   - backendRefs:
     - name: echo-server

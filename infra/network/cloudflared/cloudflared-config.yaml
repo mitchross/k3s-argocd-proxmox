@@ -10,5 +10,5 @@ ingress:
   - hostname: "*.vanillax.me"
     service: https://cilium-gateway-external.gateway.svc.cluster.local:443
     originRequest:
-      originServerName: "*.vanillax.xyz"
+      originServerName: "*.vanillax.me"
   - service: http_status:404
