@@ -1,5 +1,5 @@
 cluster:
-  name: default
+  name: proxmox
   id: 1
 
 k8sServiceHost: "192.168.10.100"
