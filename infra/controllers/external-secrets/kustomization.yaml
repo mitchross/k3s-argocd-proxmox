@@ -4,17 +4,16 @@ kind: Kustomization
 namespace: external-secrets
 
 resources:
+  - external-secret.yaml
+  - cluster-secret-store.yaml
   - ns.yaml
-
+  
 helmCharts:
   - name: external-secrets
     repo: https://charts.external-secrets.io
-    version: 0.10.0
     releaseName: external-secrets
-    includeCRDs: true
+    version: 0.10.0
     valuesFile: values.yaml
 
-secretGenerator:
-  - name: 1passwordconnect
-    envs:
-      - external-secrets-token.env
+commonAnnotations:
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
