@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: external-secrets
 
 resources:
-  - namespace.yaml
+  - ns.yaml
 
 helmCharts:
   - name: external-secrets
