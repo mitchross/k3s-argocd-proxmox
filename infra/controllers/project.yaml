@@ -21,6 +21,8 @@ spec:
       server: '*'
     - namespace: 'sealed-secrets'
       server: '*'
+    - namespace: 'external-secrets'
+      server: '*'
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
