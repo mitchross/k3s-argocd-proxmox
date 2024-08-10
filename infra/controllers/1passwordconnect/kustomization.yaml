@@ -5,24 +5,27 @@ namespace: 1passwordconnect
 
 resources:
   - ns.yaml
-  - https://github.com/1Password/connect-helm-charts/releases/download/1.15.1/connect-1.15.1.tgz
 
-patchesStrategicMerge:
-  - |-
-    apiVersion: v1
-    kind: ConfigMap
-    metadata:
-      name: 1password-connect-config
-    data:
-      1password-credentials.json: '{{ CREDENTIALS_JSON }}'
+helmCharts:
+  - name: connect
+    repo: https://1password.github.io/connect-helm-charts
+    releaseName: 1passwordconnect
+    version: 1.15.1
+    valuesFile: values.yaml
 
 configMapGenerator:
   - name: 1password-connect-values
     files:
       - values.yaml
 
-helmCharts:
-  - name: connect
-    releaseName: 1passwordconnect
-    version: 1.15.1
-    valuesFile: values.yaml
+patches:
+  - patch: |-
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: 1password-connect-config
+      data:
+        1password-credentials.json: '{{ CREDENTIALS_JSON }}'
+    target:
+      kind: ConfigMap
+      name: 1password-connect-config
