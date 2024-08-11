@@ -9,6 +9,5 @@ configMapGenerator:
 
 resources:
   - ns.yaml
-  - cloudflared-config.yaml
   - daemon-set.yaml
   - external-secret.yaml
