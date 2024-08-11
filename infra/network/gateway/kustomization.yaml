@@ -4,8 +4,6 @@ kind: Kustomization
 resources:
   - gateway-class.yaml
   - ns.yaml
-  - cloudflare-api-token-sealed.yaml
-  - cloudflare-issuer.yaml
   - gw-internal.yaml
   - gw-external.yaml
   - ext-gateway-service.yaml
