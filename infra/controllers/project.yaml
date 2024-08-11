@@ -9,8 +9,8 @@ spec:
   destinations:
     - namespace: 'argocd'
       server: '*'
-    - namespace: 'cert-manager'
-      server: '*'
+    # - namespace: 'cert-manager'
+    #   server: '*'
     - namespace: 'crossplane'
       server: '*'
     - namespace: 'node-feature-discovery'
