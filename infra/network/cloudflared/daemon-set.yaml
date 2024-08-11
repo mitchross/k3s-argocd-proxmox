@@ -46,9 +46,12 @@ spec:
               readOnly: true
       restartPolicy: Always
       volumes:
-        - name: cloudflared-config
-          configMap:
-            name: cloudflared-config
-        - name: tunnel-credentials
+        - name: creds
           secret:
-            secretName: tunnel-credentials
+            secretName: cloudflared
+        - name: config
+          configMap:
+            name: cloudflared
+            items:
+              - key: config.yaml
+                path: config.yaml

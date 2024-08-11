@@ -9,5 +9,5 @@ configMapGenerator:
 
 resources:
   - ns.yaml
-  - tunnel-credentials-sealed.yaml
+  - cloudflared-config.yaml
   - daemon-set.yaml
