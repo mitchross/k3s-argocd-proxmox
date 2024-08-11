@@ -14,7 +14,7 @@ helmCharts:
     repo: https://charts.external-secrets.io
     releaseName: external-secrets
     version: 0.10.0
-    valuesFile: values.yaml
+
 
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
