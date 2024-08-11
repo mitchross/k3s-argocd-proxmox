@@ -21,7 +21,7 @@ spec:
           args:
             - tunnel
             - --config
-            - /etc/cloudflared/config/config.yaml
+            - /etc/cloudflared/config/cloudflared-config.yaml
             - run
           livenessProbe:
             httpGet:
@@ -47,7 +47,7 @@ spec:
       volumes:
         - name: creds
           secret:
-            secretName: cloudflared  # This now refers to the secret created by ExternalSecret
+            secretName: cloudflared
         - name: config
           configMap:
-            name: cloudflared
+            name: cloudflared-config  # This should match the name in your Kustomization
