@@ -2,8 +2,8 @@ replicaCount: 1
 serviceAccount:
   create: true
 webhook:
-    certManager:
-       enabled: true
-     create: true
-   certController:
-     create: true
+  certManager:
+    enabled: true
+  create: true
+certController:
+  create: true
