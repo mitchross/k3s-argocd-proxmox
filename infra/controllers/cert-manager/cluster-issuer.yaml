@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: cloudflare-cluster-issuer
+  name: cloudflare-issuer
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
