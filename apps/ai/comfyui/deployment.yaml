@@ -30,7 +30,7 @@ spec:
               mountPath: /cache
       containers:
         - name: comfyui
-          image: ghcr.io/mitchross/comfyui-flux-flux@sha256:7bb66daf0bf6b04eed838af74987031ab436dc9614924e3f727ddb3bc05944e9
+          image: ghcr.io/mitchross/comfyui-flux-flux@sha256:421db15f85d75bfa24211563d9b6a1d616bc45547b2251fe0b2a63fb5e9cd01e
 
           imagePullPolicy: IfNotPresent
           ports:
