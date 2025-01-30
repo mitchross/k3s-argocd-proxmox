@@ -14,7 +14,7 @@ helmCharts:
     releaseName: longhorn
     namespace: longhorn-system
     includeCRDs: true
-    version: v1.7.2
+    version: 1.8.0
     valuesInline:
       persistence:
         defaultClass: false
