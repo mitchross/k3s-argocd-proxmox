@@ -13,7 +13,7 @@ resources:
 helmCharts:
   - name: headlamp
     repo: https://headlamp-k8s.github.io/headlamp/
-    version: 0.21.0
+    version: 0.29.1
     releaseName: my-headlamp
     namespace: kube-system
     includeCRDs: true
