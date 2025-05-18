@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: it-tools
-        image: ghcr.io/sharevb/it-tools:nightly@sha256:3ba681566129514bec277d75212f71f300910b1ec01a529a7c09165aa09e82c9
+        image: ghcr.io/sharevb/it-tools:nightly@sha256:4b7f532f8e322bed4378fd8e62945471ab846acf22c5e22e302a4b0b2c429457
         env: 
         - name: TZ
           value: America/Detroit
