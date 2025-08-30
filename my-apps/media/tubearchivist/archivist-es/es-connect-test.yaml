@@ -10,7 +10,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: es-test
-        image: curlimages/curl:8.2.1
+        image: curlimages/curl:8.15.0
         command: [ "sh", "-c" ]
         args:
         - |
